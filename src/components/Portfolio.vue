@@ -37,9 +37,12 @@
           :data-aos-delay="project.delay"
         >
           <div class="portfolio-image">
-            <div class="portfolio-visual">
-              <i :class="project.icon"></i>
-            </div>
+            <img
+              :src="project.image"
+              :alt="project.title"
+              class="project-img"
+            />
+
             <div class="portfolio-overlay">
               <div class="portfolio-actions">
                 <button class="action-btn">
@@ -87,6 +90,12 @@
 </template>
 
 <script>
+import image1 from "@/assets/images/1.png";
+import image2 from "@/assets/images/5.png";
+import image3 from "@/assets/images/3.png";
+import image4 from "@/assets/images/6.png";
+import image5 from "@/assets/images/2.png";
+import image6 from "@/assets/images/4.png";
 export default {
   name: "Portfolio",
   data() {
@@ -99,6 +108,9 @@ export default {
         { id: "kuchnia", name: "Kuchnie" },
         { id: "łazienka", name: "Łazienki" },
       ],
+      // ZMIANA: W danych poniżej podmieniłem 'icon' na 'image'
+      // Uwaga: Użyłem placeholderów. Docelowo wstaw tu ścieżki do swoich plików,
+      // np. require('@/assets/salon1.jpg') lub '/img/salon1.jpg'
       projects: [
         {
           id: 1,
@@ -109,7 +121,7 @@ export default {
           year: "2024",
           area: "45 m²",
           duration: "6 tygodni",
-          icon: "fas fa-couch",
+          image: image1, // Tutaj wstaw swoje zdjęcie
           filter: "salon",
           delay: 0,
         },
@@ -121,7 +133,7 @@ export default {
           year: "2024",
           area: "35 m²",
           duration: "8 tygodni",
-          icon: "fas fa-bed",
+          image: image2, // Tutaj wstaw swoje zdjęcie
           filter: "sypialnia",
           delay: 100,
         },
@@ -133,7 +145,7 @@ export default {
           year: "2023",
           area: "28 m²",
           duration: "10 tygodni",
-          icon: "fas fa-utensils",
+          image: image3, // Tutaj wstaw swoje zdjęcie
           filter: "kuchnia",
           delay: 200,
         },
@@ -145,7 +157,7 @@ export default {
           year: "2023",
           area: "18 m²",
           duration: "7 tygodni",
-          icon: "fas fa-bath",
+          image: image4, // Tutaj wstaw swoje zdjęcie
           filter: "łazienka",
           delay: 300,
         },
@@ -157,7 +169,7 @@ export default {
           year: "2023",
           area: "40 m²",
           duration: "5 tygodni",
-          icon: "fas fa-couch",
+          image: image5, // Tutaj wstaw swoje zdjęcie
           filter: "salon",
           delay: 400,
         },
@@ -169,7 +181,7 @@ export default {
           year: "2024",
           area: "22 m²",
           duration: "9 tygodni",
-          icon: "fas fa-utensils",
+          image: image6, // Tutaj wstaw swoje zdjęcie
           filter: "kuchnia",
           delay: 500,
         },

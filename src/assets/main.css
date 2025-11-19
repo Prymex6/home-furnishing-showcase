@@ -1945,3 +1945,26 @@ textarea.form-control {
     background: var(--secondary);
     color: white;
 }
+
+.portfolio-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    /* Możesz dostosować wysokość */
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    /* Zaokrąglenie góry, jeśli karta ma border-radius */
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* To sprawia, że zdjęcie nie będzie rozciągnięte */
+    transition: transform 0.5s ease;
+}
+
+/* Efekt przybliżenia przy najechaniu na kafelek */
+.portfolio-card:hover .project-img {
+    transform: scale(1.1);
+}
